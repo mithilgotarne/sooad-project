@@ -36,6 +36,21 @@ angular.module('myApp',['ngRoute'])
             }
         ];
 
+        $scope.projects = [
+            {
+                title:"Popular",
+                url:"https://github.com/mithilgotarne/Popular"
+            },
+            {
+                title:"E-Cell, SPIT",
+                url:"https://ecellsp.org"
+            },
+            {
+                title:"Virtual Stock Market",
+                url:"https://github.com/mithilgotarne/VSM2"
+            }
+        ];
+
     })
 
     .config(function ($locationProvider, $routeProvider) {
