@@ -1,0 +1,76 @@
+<div class="mdl-grid">
+    <div class="mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-grid">
+        <div class="mdl-cell mdl-cell--2-col userimage mdl-color-text--pink-500 material-icons"
+             style="font-size: 180px; text-align: center">person
+        </div>
+        <div class="mdl-cell mdl-cell--10-col">
+            <h4>Surname Name Middle</h4>
+            <div class="mdl-grid top-container">
+                <p>{{about}}</p>
+                <div class="mdl-cell mdl-cell--4-col">
+                    <i class="material-icons">contacts</i><span> Roll No: 2014130019</span><br>
+                    <i class="material-icons">book</i><span> Program : BE</span>
+                </div>
+                <div class="mdl-cell mdl-cell--4-col">
+                    <i class="material-icons">assignment</i><span> Admission No : NA</span><br>
+                    <i class="material-icons">bookmark</i><span> Current Semester : S5</span>
+                </div>
+                <div class="mdl-cell mdl-cell--4-col">
+                    <i class="material-icons">assignment</i><span> Class Name : CE | 2014-2018 </span><br>
+                    <i class="material-icons">description</i><span> Selection Type : CAP</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mdl-grid" style="margin-top: 0; padding-top: 0">
+
+    <div class="mdl-cell mdl-cell--8-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone
+    mdl-color--white mdl-shadow--4dp">
+
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Academics</h2>
+        </div>
+        <table class="mdl-data-table mdl-js-data-table" style="width: 100%">
+            <thead>
+            <tr>
+                <th class="mdl-data-table__cell--non-numeric">Course</th>
+                <th class="mdl-data-table__cell--non-numeric">Institution Name</th>
+                <th class="mdl-data-table__cell--non-numeric">City</th>
+                <th class="mdl-data-table__cell--non-numeric">Board</th>
+                <th class="mdl-data-table__cell--non-numeric">Year of Passing</th>
+                <th class="mdl-data-table__cell--non-numeric">Marks</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="a in academics">
+                <td class="mdl-data-table__cell--non-numeric">{{a.course}}</td>
+                <td class="mdl-data-table__cell--non-numeric">{{a.institute}}</td>
+                <td class="mdl-data-table__cell--non-numeric">{{a.city}}</td>
+                <td class="mdl-data-table__cell--non-numeric">{{a.board}}</td>
+                <td class="mdl-data-table__cell--non-numeric">{{a.yop}}</td>
+                <td class="mdl-data-table__cell--non-numeric">{{a.marks}}</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="mdl-card__actions mdl-card--border" style="text-align: right">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="">Read More</a>
+        </div>
+
+    </div>
+
+    <div class="mdl-card mdl-cell mdl-cell--4-col mdl-shadow--4dp">
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">title Text Goes Here</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            This text might describe the photo and provide further information, such as where and
+            when it was taken.
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="">Related Action</a>
+        </div>
+    </div>
+
+
+</div>
