@@ -1,0 +1,105 @@
+<div layout="row">
+    <div class="mdl-color--white mdl-shadow--4dp" flex-sm="100" flex-xs="100" flex="60" flex-offset="20"
+         flex-offset-sm="0" flex-offset-xs="0">
+        <md-tabs md-dynamic-height md-border-bottom class="md-accent" md-selected="data.selectedIndex"
+                 md-center-tabs="true" md-swipe-content="true">
+            <md-tab id="tab1">
+                <md-tab-label>Basic</md-tab-label>
+                <md-tab-body>
+
+                    <md-content layout-padding>
+
+                        <form name="basicForm">
+
+                            <md-input-container class="md-block">
+                                <label>Name</label>
+                                <input ng-model="basic.name" disabled>
+                            </md-input-container>
+
+                            <md-input-container class="md-block">
+                                <label>Roll Number</label>
+                                <input ng-model="basic.roll_no" disabled>
+                            </md-input-container>
+
+                            <md-input-container class="md-block">
+                                <label>Gender</label>
+                                <md-select ng-model="basic.gender" disabled>
+                                    <md-option ng-repeat="g in basic.genders" value="{{g}}">
+                                        {{g}}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+
+                            <md-checkbox ng-model="basic.pwd" aria-label="Differently Abled" disabled>
+                                Differently Abled
+                            </md-checkbox>
+
+                            <md-input-container class="md-block">
+                                <label>Aadhar Number</label>
+                                <input ng-model="basic.aadhar">
+                            </md-input-container>
+
+                            <label>Date of Birth</label>
+                            <md-datepicker ng-model="basic.dob" md-placeholder="Enter date">
+                            </md-datepicker>
+
+                        </form>
+
+                    </md-content>
+
+                </md-tab-body>
+            </md-tab>
+            <md-tab id="tab2">
+                <md-tab-label>Contact</md-tab-label>
+                <md-tab-body>
+
+                    <md-content layout-padding>
+
+                        <form>
+
+                            <md-input-container class="md-block">
+                                <label>Email</label>
+                                <input ng-model="contact.email" type="email">
+                            </md-input-container>
+
+                            <md-input-container class="md-block" style="margin-bottom: 0">
+                                <label>Address</label>
+                                <textarea ng-model="contact.address" rows="5" md-select-on-focus style="height: 60px;"></textarea>
+                            </md-input-container>
+
+                            <div layout="row">
+
+                                <md-input-container flex="50">
+                                    <label>Phone Number</label>
+                                    <input ng-model="contact.phone" type="tel">
+                                </md-input-container>
+
+                                <md-input-container flex="50">
+                                    <label>Landline</label>
+                                    <input ng-model="contact.landline" type="tel">
+                                </md-input-container>
+
+                            </div>
+
+                        </form>
+
+
+                    </md-content>
+
+                </md-tab-body>
+            </md-tab>
+            <md-tab id="tab3">
+                <md-tab-label>Guardian</md-tab-label>
+                <md-tab-body>
+
+                </md-tab-body>
+            </md-tab>
+            <md-tab id="tab4">
+                <md-tab-label>About Me</md-tab-label>
+                <md-tab-body>
+
+                </md-tab-body>
+            </md-tab>
+        </md-tabs>
+    </div>
+</div>

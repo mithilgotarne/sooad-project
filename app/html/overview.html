@@ -12,7 +12,7 @@
                     <i class="material-icons">book</i><span> Program : BE</span>
                 </div>
                 <div class="mdl-cell mdl-cell--4-col">
-                    <i class="material-icons">assignment</i><span> Admission No : NA</span><br>
+                    <i class="material-icons">room</i><span> Admission No : NA</span><br>
                     <i class="material-icons">bookmark</i><span> Current Semester : S5</span>
                 </div>
                 <div class="mdl-cell mdl-cell--4-col">
@@ -63,18 +63,46 @@
         <div class="mdl-card__title">
             <h2 class="mdl-card__title-text">Projects</h2>
         </div>
-        <div class="demo-list-action mdl-list">
+        <div class="mdl-list">
             <div class="mdl-list__item" ng-repeat="p in projects">
                 <span class="mdl-list__item-primary-content">
                   <i class="material-icons mdl-list__item-icon">bookmark</i>
                   <span>{{p.title}}</span>
                 </span>
-                <a target="_blank" class="mdl-list__item-secondary-action" ng-href="{{p.url}}"><i class="material-icons">open_in_new</i></a>
+                <a target="_blank" class="mdl-list__item-secondary-action" ng-href="{{p.url}}"><i
+                        class="material-icons">open_in_new</i></a>
             </div>
         </div>
         <div class="mdl-card__actions mdl-card--border" style="text-align: right">
             <div class="mdl-layout-spacer"></div>
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="">View All</a>
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="">View Portfolio</a>
         </div>
     </div>
+</div>
+<div class="mdl-grid">
+
+    <div class="mdl-card mdl-cell mdl-cell--12-col mdl-color--white mdl-shadow--4dp">
+
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Skills</h2>
+        </div>
+
+        <div class="mdl-card__supporting-text" style="width: 97%; padding:0; padding-left: 36px;">
+
+            <div class="chart" ng-repeat="s in skills">
+                <div easypiechart options="s.options" percent="s.percent">
+                    <span class="percent" ng-bind="s.percent"></span>
+                </div>
+                <span class="label">{{s.title}}</span>
+            </div>
+
+        </div>
+
+        <div class="mdl-card__actions mdl-card--border" style="text-align: right">
+            <div class="mdl-layout-spacer"></div>
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="">View Resume</a>
+        </div>
+
+    </div>
+
 </div>

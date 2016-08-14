@@ -3,12 +3,12 @@ html, body {
     font-family: 'Roboto', 'Helvetica', sans-serif;
 }
 
-ul, li{
+ul, li {
     padding: 0;
     margin: 0;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
@@ -24,9 +24,11 @@ ul{
     padding: 0px;
     margin-top: 41px;
 }
+
 .demo-layout .demo-header .mdl-textfield .mdl-textfield__expandable-holder {
     bottom: 19px;
 }
+
 .demo-layout .demo-navigation .mdl-navigation__link {
     display: -webkit-flex !important;
     display: -ms-flexbox !important;
@@ -40,16 +42,20 @@ ul{
     color: #212121;
     font-weight: 500;
 }
+
 .demo-layout .demo-navigation .mdl-navigation__link:hover {
     color: #3F51B5;
 }
+
 .demo-drawer {
     border: none;
 }
+
 /* iOS Safari specific workaround */
 .demo-drawer .mdl-menu__container {
     z-index: -1;
 }
+
 .demo-drawer .demo-navigation {
     z-index: -2;
 }
@@ -63,6 +69,7 @@ ul{
     -ms-flex-align: center;
     align-items: center;
 }
+
 .demo-drawer-header {
     box-sizing: border-box;
     display: -webkit-flex;
@@ -79,11 +86,13 @@ ul{
     background-image: url('images/drawer_bg.jpg');
     background-size: cover;
 }
+
 .demo-navigation {
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
 }
+
 .demo-layout .demo-navigation .mdl-navigation__link {
     display: -webkit-flex !important;
     display: -ms-flexbox !important;
@@ -97,6 +106,7 @@ ul{
     color: #212121;
     font-weight: 500;
 }
+
 .demo-layout .demo-navigation .mdl-navigation__link:hover {
     color: #3F51B5;
 }
@@ -116,14 +126,50 @@ ul{
     max-width: 1080px;
 }
 
-.userimage{
+.userimage {
     cursor: default;
 }
 
-.top-container span{
+.top-container span {
     position: relative;
     bottom: 6px;
     font-size: 16px;
 }
+
+.chart {
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: 200px;
+    margin: 10px;
+    margin-left: 0;
+    text-align: center;
+    padding: 10px 20px;
+}
+.chart canvas {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+.percent {
+    display: inline-block;
+    font-size: 3em;
+    line-height: 200px;
+    z-index: 2;
+    color: rgb(136, 136, 136);
+}
+.percent:after {
+    content: '%';
+    margin-left: 0.1em;
+    font-size: .8em;
+}
+
+.chart > .label{
+    text-align: center;
+    color: #333;
+    font-size: 1.2em;
+    line-height: 2.4em;
+}
+
 
 
