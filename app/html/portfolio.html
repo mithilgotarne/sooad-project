@@ -1,0 +1,79 @@
+<md-content class="md-padding" layout-xs="column" layout="row">
+    <div flex-xs flex-gt-xs="33" layout="column">
+        <md-card md-whiteframe="8" ng-repeat="p in portfolios" ng-if="$index%3==0" style="margin-bottom: 20px">
+            <img ng-src="{{p.img}}" class="md-card-image" alt="Washed Out">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">{{p.title}}</span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+                <p>
+                    {{p.desc}}
+                </p>
+            </md-card-content>
+            <md-card-actions layout="row" layout-align="start center">
+
+                <md-button class="md-icon-button" ng-click="rmPortfolio($index)">
+                    <md-icon class="material-icons">delete</md-icon>
+                </md-button>
+
+
+            </md-card-actions>
+        </md-card>
+    </div>
+    <div flex-xs flex-gt-xs="33" layout="column">
+        <md-card md-whiteframe="8" ng-repeat="p in portfolios" ng-if="$index%3==1" style="margin-bottom: 20px">
+            <img ng-src="{{p.img}}" class="md-card-image" alt="Washed Out">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">{{p.title}}</span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+                <p>
+                    {{p.desc}}
+                </p>
+            </md-card-content>
+            <md-card-actions layout="row" layout-align="start center">
+
+                <md-button class="md-icon-button" ng-click="rmPortfolio($index)">
+                    <md-icon class="material-icons">delete</md-icon>
+                </md-button>
+
+
+            </md-card-actions>
+        </md-card>
+    </div>
+    <div flex-xs flex-gt-xs="33" layout="column">
+        <md-card md-whiteframe="8" ng-repeat="p in portfolios" ng-if="$index%3==2" style="margin-bottom: 20px">
+            <img ng-src="{{p.img}}" class="md-card-image" alt="Washed Out">
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">{{p.title}}</span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+                <p>
+                    {{p.desc}}
+                </p>
+            </md-card-content>
+            <md-card-actions layout="row" layout-align="start center">
+
+                <md-button class="md-icon-button" ng-click="rmPortfolio($index)">
+                    <md-icon class="material-icons">delete</md-icon>
+                </md-button>
+
+            </md-card-actions>
+        </md-card>
+    </div>
+
+</md-content>
+
+<div style="position: fixed; right: 45px; bottom: 30px; z-index: 1000">
+    <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--primary"
+            ng-click="addPortfolio()">
+        <md-tooltip>Add Portfolio</md-tooltip>
+        <i class="material-icons">add</i>
+    </button>
+</div>

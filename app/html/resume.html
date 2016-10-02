@@ -1,0 +1,135 @@
+<div layout="row">
+    <div class="mdl-color--white mdl-shadow--4dp" flex-sm="100" flex-xs="100" flex="60" flex-offset="20"
+         flex-offset-sm="0" flex-offset-xs="0">
+        <md-tabs md-dynamic-height md-border-bottom class="md-accent" md-selected="0"
+                 md-center-tabs="true" md-swipe-content="true">
+            <md-tab id="tab1">
+                <md-tab-label>Current Aggregates</md-tab-label>
+                <md-tab-body>
+
+                    <md-content layout-padding>
+
+                        <md-input-container class="md-block" flex-gt-xs>
+                            <label>Current Aggregate</label>
+                            <input ng-model="agg.marks" type="number" min="0" max="10" step="0.01">
+                        </md-input-container>
+
+                        <md-input-container class="md-block" flex-gt-xs>
+                            <label>Current Back Papers</label>
+                            <input ng-model="agg.back" type="number" min="0" max="8" ng-readonly="true">
+                        </md-input-container>
+
+
+                    </md-content>
+
+                </md-tab-body>
+            </md-tab>
+            <md-tab id="tab2">
+                <md-tab-label>Strength</md-tab-label>
+                <md-tab-body>
+
+                    <md-content layout-padding>
+
+                        <div layout="row" ng-repeat="s in strengths">
+                            <md-input-container class="md-block" flex-gt-xs style="margin-bottom: 0">
+                                <label>Strength</label>
+                                <input ng-model="s.name" type="text">
+                            </md-input-container>
+
+                            <md-input-container class="md-block" flex-gt-xs style="margin-bottom: 0">
+                                <label>Description</label>
+                                <input ng-model="s.desc" type="text">
+                            </md-input-container>
+
+                            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--accent"
+                                    ng-click="rmStrength($index)" style="margin-top: 18px">
+                                <md-tooltip>Remove {{s.name}}</md-tooltip>
+                                <i class="material-icons">delete</i>
+                            </button>
+
+                        </div>
+
+                        <div layout="row" layout-align="space-between end">
+
+                            <div><p ng-show="strengths.length == 0">You haven't added any strengths.</p></div>
+
+                            <div>
+                                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--primary"
+                                        ng-click="addStrength()">
+                                    <md-tooltip>Add Strength</md-tooltip>
+                                    <i class="material-icons">add</i>
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </md-content>
+
+                </md-tab-body>
+            </md-tab>
+            <md-tab id="tab3">
+                <md-tab-label>Skills</md-tab-label>
+                <md-tab-body>
+
+
+                    <md-content layout="row" layout-padding>
+                        <md-slider-container flex ng-repeat="skill in skills">
+                            <md-input-container>
+                                <input flex type="number" ng-model="skill.percent" min="0" max="100"
+                                       aria-label="{{skill.title}}"
+                                       aria-controls="{{skill.title}}">
+                            </md-input-container>
+                            <md-slider md-discrete ng-model="skill.percent" min="0" max="100"
+                                       aria-label="{{skill.title}}"
+                                       id="{{skill.title}}"
+                                       class="md-primary" md-vertical
+                                       md-range></md-slider>
+                            <h5 style="font-size: 1em">{{skill.title}}</h5>
+                        </md-slider-container>
+                    </md-content>
+
+
+                </md-tab-body>
+            </md-tab>
+            <md-tab id="tab4">
+                <md-tab-label>Hobbies & Interests</md-tab-label>
+                <md-tab-body>
+
+                    <md-content layout-padding>
+
+                        <div layout="row" ng-repeat="h in hobbies track by $index">
+
+                            <md-input-container class="md-block" flex-gt-xs style="margin-bottom: 0">
+                                <label>Hobby or Interest</label>
+                                <input ng-model="h" type="text">
+                            </md-input-container>
+
+                            <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--accent"
+                                    ng-click="rmHobby($index)" style="margin-top: 18px">
+                                <md-tooltip>Remove {{h}}</md-tooltip>
+                                <i class="material-icons">delete</i>
+                            </button>
+
+                        </div>
+
+                        <div layout="row" layout-align="space-between end">
+
+                            <div><p ng-show="hobbies.length == 0">You haven't added any Hobbies or Interests.</p></div>
+
+                            <div>
+                                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--primary"
+                                        ng-click="addHobby()">
+                                    <md-tooltip>Add s Hobby or Interest</md-tooltip>
+                                    <i class="material-icons">add</i>
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </md-content>
+
+                </md-tab-body>
+            </md-tab>
+        </md-tabs>
+    </div>
+</div>

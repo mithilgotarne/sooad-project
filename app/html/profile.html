@@ -13,24 +13,24 @@
 
                             <md-input-container class="md-block">
                                 <label>Name</label>
-                                <input ng-model="basic.name" disabled>
+                                <input ng-model="basic.name" ng-readonly="true">
                             </md-input-container>
 
                             <md-input-container class="md-block">
                                 <label>Roll Number</label>
-                                <input ng-model="basic.roll_no" disabled>
+                                <input ng-model="basic.roll_no" ng-readonly="true">
                             </md-input-container>
 
                             <md-input-container class="md-block">
                                 <label>Gender</label>
-                                <md-select ng-model="basic.gender" disabled>
+                                <md-select ng-model="basic.gender" ng-disabled="true">
                                     <md-option ng-repeat="g in basic.genders" value="{{g}}">
                                         {{g}}
                                     </md-option>
                                 </md-select>
                             </md-input-container>
 
-                            <md-checkbox ng-model="basic.pwd" aria-label="Differently Abled" disabled>
+                            <md-checkbox ng-model="basic.pwd" aria-label="Differently Abled" ng-disabled="true">
                                 Differently Abled
                             </md-checkbox>
 
@@ -64,7 +64,8 @@
 
                             <md-input-container class="md-block" style="margin-bottom: 0">
                                 <label>Address</label>
-                                <textarea ng-model="contact.address" rows="5" md-select-on-focus style="height: 60px;"></textarea>
+                                <textarea ng-model="contact.address" rows="5" md-select-on-focus
+                                          style="height: 60px;"></textarea>
                             </md-input-container>
 
                             <div layout="row">
@@ -92,11 +93,67 @@
                 <md-tab-label>Guardian</md-tab-label>
                 <md-tab-body>
 
+                    <md-content layout-padding>
+
+                        <form>
+                            <label>Father</label><br>
+                            <div layout="row">
+                                <md-input-container class="md-block" flex-gt-xs>
+                                    <label>Name</label>
+                                    <input ng-model="guardian.father.name" type="text">
+                                </md-input-container>
+
+                                <md-input-container class="md-block" flex-gt-xs>
+                                    <label>Occupation</label>
+                                    <input ng-model="guardian.father.occupation" type="text">
+                                </md-input-container>
+
+                                <md-input-container class="md-block" flex-gt-xs>
+                                    <label>Contact Number</label>
+                                    <input ng-model="guardian.father.phone" type="tel">
+                                </md-input-container>
+
+                            </div>
+
+                            <label>Mother</label><br>
+                            <div layout="row">
+                                <md-input-container class="md-block" flex-gt-xs>
+                                    <label>Name</label>
+                                    <input ng-model="guardian.mother.name" type="text">
+                                </md-input-container>
+
+                                <md-input-container class="md-block" flex-gt-xs>
+                                    <label>Occupation</label>
+                                    <input ng-model="guardian.mother.occupation" type="text">
+                                </md-input-container>
+
+                                <md-input-container class="md-block" flex-gt-xs>
+                                    <label>Contact Number</label>
+                                    <input ng-model="guardian.mother.phone" type="tel">
+                                </md-input-container>
+
+                            </div>
+
+                        </form>
+
+
+                    </md-content>
+
                 </md-tab-body>
             </md-tab>
             <md-tab id="tab4">
                 <md-tab-label>About Me</md-tab-label>
                 <md-tab-body>
+
+                    <md-content style="padding: 16px">
+
+                        <md-input-container class="md-block">
+                            <label>About Me</label>
+                            <textarea ng-model="aboutMe" rows="5" md-select-on-focus
+                                      style="height: 135px;"></textarea>
+                        </md-input-container>
+
+                    </md-content>
 
                 </md-tab-body>
             </md-tab>
