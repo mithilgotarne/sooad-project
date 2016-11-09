@@ -4,20 +4,20 @@
              style="font-size: 180px; text-align: center">person
         </div>
         <div class="mdl-cell mdl-cell--10-col">
-            <h4>Surname Name Middle</h4>
+            <h4>{{profile.name}}</h4>
+            <p>{{about.text}}</p>
             <div class="mdl-grid top-container">
-                <p>{{about}}</p>
                 <div class="mdl-cell mdl-cell--4-col">
-                    <i class="material-icons">contacts</i><span> Roll No: 2014130019</span><br>
-                    <i class="material-icons">book</i><span> Program : BE</span>
+                    <i class="material-icons">contacts</i><span> Roll No: {{profile.roll_no}}</span><br>
+                    <i class="material-icons">book</i><span> Program : {{overview.program}}</span>
                 </div>
                 <div class="mdl-cell mdl-cell--4-col">
                     <i class="material-icons">room</i><span> Admission No : NA</span><br>
-                    <i class="material-icons">bookmark</i><span> Current Semester : S5</span>
+                    <i class="material-icons">bookmark</i><span> Current Semester : {{overview.sem}}</span>
                 </div>
                 <div class="mdl-cell mdl-cell--4-col">
-                    <i class="material-icons">assignment</i><span> Class Name : CE | 2014-2018 </span><br>
-                    <i class="material-icons">description</i><span> Selection Type : CAP</span>
+                    <i class="material-icons">assignment</i><span> Class Name : {{overview.class}} </span><br>
+                    <i class="material-icons">description</i><span> Selection Type : {{overview.selection_type}}</span>
                 </div>
             </div>
         </div>
@@ -54,7 +54,7 @@
             </tbody>
         </table>
         <div class="mdl-card__actions mdl-card--border" style="text-align: right">
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="">Read More</a>
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="#!/resume">Read More</a>
         </div>
 
     </div>
@@ -75,7 +75,7 @@
         </div>
         <div class="mdl-card__actions mdl-card--border" style="text-align: right">
             <div class="mdl-layout-spacer"></div>
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="">View Portfolio</a>
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="#!/portfolio">View Portfolio</a>
         </div>
     </div>
 </div>
@@ -100,7 +100,7 @@
 
         <div class="mdl-card__actions mdl-card--border" style="text-align: right">
             <div class="mdl-layout-spacer"></div>
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="">View Resume</a>
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="#!/resume">View Resume</a>
         </div>
 
     </div>

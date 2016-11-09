@@ -33,16 +33,16 @@
                         <div layout="row" ng-repeat="s in strengths">
                             <md-input-container class="md-block" flex-gt-xs style="margin-bottom: 0">
                                 <label>Strength</label>
-                                <input ng-model="s.name" type="text">
+                                <input ng-change="strengths.$save(s)" ng-model="s.name" type="text">
                             </md-input-container>
 
                             <md-input-container class="md-block" flex-gt-xs style="margin-bottom: 0">
                                 <label>Description</label>
-                                <input ng-model="s.desc" type="text">
+                                <input ng-change="strengths.$save(s)" ng-model="s.desc" type="text">
                             </md-input-container>
 
                             <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--accent"
-                                    ng-click="rmStrength($index)" style="margin-top: 18px">
+                                    ng-click="strengths.$remove(s)" style="margin-top: 18px">
                                 <md-tooltip>Remove {{s.name}}</md-tooltip>
                                 <i class="material-icons">delete</i>
                             </button>
@@ -75,13 +75,16 @@
                     <md-content layout="row" layout-padding>
                         <md-slider-container flex ng-repeat="skill in skills">
                             <md-input-container>
-                                <input flex type="number" ng-model="skill.percent" min="0" max="100"
+                                <input flex type="number" ng-model="skill.percent"
+                                       ng-change="skills.$save(skill)"
+                                       min="0" max="100"
                                        aria-label="{{skill.title}}"
                                        aria-controls="{{skill.title}}">
                             </md-input-container>
                             <md-slider md-discrete ng-model="skill.percent" min="0" max="100"
                                        aria-label="{{skill.title}}"
                                        id="{{skill.title}}"
+                                       ng-change="skills.$save(skill)"
                                        class="md-primary" md-vertical
                                        md-range></md-slider>
                             <h5 style="font-size: 1em">{{skill.title}}</h5>
@@ -101,12 +104,12 @@
 
                             <md-input-container class="md-block" flex-gt-xs style="margin-bottom: 0">
                                 <label>Hobby or Interest</label>
-                                <input ng-model="h" type="text">
+                                <input ng-model="h.name" ng-change="hobbies.$save(h)" type="text">
                             </md-input-container>
 
                             <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--accent"
-                                    ng-click="rmHobby($index)" style="margin-top: 18px">
-                                <md-tooltip>Remove {{h}}</md-tooltip>
+                                    ng-click="hobbies.$remove(h)" style="margin-top: 18px">
+                                <md-tooltip>Remove {{h.name}}</md-tooltip>
                                 <i class="material-icons">delete</i>
                             </button>
 

@@ -24,7 +24,7 @@
                             <md-input-container class="md-block">
                                 <label>Gender</label>
                                 <md-select ng-model="basic.gender" ng-disabled="true">
-                                    <md-option ng-repeat="g in basic.genders" value="{{g}}">
+                                    <md-option ng-repeat="g in genders" ng-selected="g==basic.gender" value="{{g}}">
                                         {{g}}
                                     </md-option>
                                 </md-select>
@@ -40,7 +40,9 @@
                             </md-input-container>
 
                             <label>Date of Birth</label>
-                            <md-datepicker ng-model="basic.dob" md-placeholder="Enter date">
+                            <md-datepicker ng-model="dob"
+                                           ng-change="basic.dob = (dob.getMonth()+1) + '/' + dob.getDate() + '/' + dob.getFullYear()"
+                                           md-placeholder="Enter date">
                             </md-datepicker>
 
                         </form>
@@ -149,7 +151,7 @@
 
                         <md-input-container class="md-block">
                             <label>About Me</label>
-                            <textarea ng-model="aboutMe" rows="5" md-select-on-focus
+                            <textarea ng-model="about.text" rows="5" md-select-on-focus
                                       style="height: 135px;"></textarea>
                         </md-input-container>
 
